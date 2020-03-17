@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.meetup.motionlayout.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_basicMotionFragment"
+            app:destination="@id/basicMotionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_keyFramesFragment"
+            app:destination="@id/keyFramesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_keyCycleFragment"
+            app:destination="@id/keyCycleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scrollViewFragment"
+            app:destination="@id/scrollViewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notDirectChildFragment"
+            app:destination="@id/notDirectChildFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicMotionFragment"
+        android:name="com.meetup.motionlayout.fragments.BasicMotionFragment"
+        android:label="fragment_basic_motion"
+        tools:layout="@layout/fragment_basic_motion" />
+    <fragment
+        android:id="@+id/keyFramesFragment"
+        android:name="com.meetup.motionlayout.fragments.KeyFramesFragment"
+        android:label="fragment_key_frames"
+        tools:layout="@layout/fragment_key_frames" />
+    <fragment
+        android:id="@+id/keyCycleFragment"
+        android:name="com.meetup.motionlayout.fragments.KeyCycleFragment"
+        android:label="fragment_key_cycle"
+        tools:layout="@layout/fragment_key_cycle" />
+    <fragment
+        android:id="@+id/scrollViewFragment"
+        android:name="com.meetup.motionlayout.fragments.ScrollViewFragment"
+        android:label="fragment_scroll_view"
+        tools:layout="@layout/fragment_scroll_view" />
+    <fragment
+        android:id="@+id/notDirectChildFragment"
+        android:name="com.meetup.motionlayout.NotDirectChildFragment"
+        android:label="fragment_not_direct_child"
+        tools:layout="@layout/fragment_not_direct_child" />
+</navigation>
