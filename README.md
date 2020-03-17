@@ -27,10 +27,10 @@ Dependncy:
 (((    		app:motionDebug="SHOW_ALL"
 
 Создать файл MoitionScene (можно просто альт ентер на свойстве layoutDescription)
+	
 	<?xml version="1.0" encoding="utf-8"?>
 	<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
 	    xmlns:motion="http://schemas.android.com/apk/res-auto">
-
 	    <Transition
 	        motion:constraintSetStart="@+id/start"  ---- что в начале 
 	        motion:constraintSetEnd="@+id/end"		---- что в конце
