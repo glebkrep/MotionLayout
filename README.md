@@ -1,7 +1,7 @@
 # MotionLayout
 MotionLayout
 
-1)Overview:
+1) Overview:
 MotionLayout - лейаут, который помогает контролировать движение вьюшек и их анимацию
 (backwards-compatible to API level 14)
 
@@ -12,21 +12,22 @@ MotionLayout - subclass ConstraintLayout'a и вследствии этого К
 *Важно: Моушн лейаут позволяет работать только с прямыми детьми (НО можно это обойти так, как я делал в мэджик секьюрити) ++++++ Функция из Мэджик Секьюрити
 
 
-2)Начать работу с МоушнЛейаут:
-Dependncy:
+2) Начать работу с МоушнЛейаут:
+
+- Dependncy:
 	dependencies {
 	    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
 	}
 
-Добавить МоушнЛейаут в лейаут файл (можно просто заменить с констрейнт без каких либо потерь)
+- Добавить МоушнЛейаут в лейаут файл (можно просто заменить с констрейнт без каких либо потерь)
 
-Добавить к МоушнЛейауту свойство
+- Добавить к МоушнЛейауту свойство
 	app:layoutDescription="@xml/scene_01"
 
 (((		Можно для дебагинга:	
 (((    		app:motionDebug="SHOW_ALL"
 
-Создать файл MoitionScene (можно просто альт ентер на свойстве layoutDescription)
+- Создать файл MoitionScene (можно просто альт ентер на свойстве layoutDescription)
 	
 	<?xml version="1.0" encoding="utf-8"?>
 	<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
