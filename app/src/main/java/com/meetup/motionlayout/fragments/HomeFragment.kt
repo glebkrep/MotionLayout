@@ -28,9 +28,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         btn_scrollview.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_scrollViewFragment)
         }
-        btn_not_child.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_notDirectChildFragment)
-        }
-
     }
 }
