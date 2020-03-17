@@ -28,17 +28,16 @@ MotionLayout - subclass ConstraintLayout'a и вследствии этого К
 (((    		app:motionDebug="SHOW_ALL"
 
 - Создать файл MoitionScene (можно просто альт ентер на свойстве layoutDescription)
-	
+```
 	<?xml version="1.0" encoding="utf-8"?>
 	<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
 	    xmlns:motion="http://schemas.android.com/apk/res-auto">
 	    <Transition
 	        motion:constraintSetStart="@+id/start"  ---- что в начале 
-	        motion:constraintSetEnd="@+id/end"		---- что в конце
-	        motion:duration="1000">					---- время анимации
-	        
-	        <OnSwipe								---- контроль движения по свайпу (есть еще OnClick)
-	            motion:touchAnchorId="@+id/button"	---- показываем какую вьюшку мы можем двигать (еще есть touchAnchorRegion можем указать регион где можно
+	        motion:constraintSetEnd="@+id/end"	---- что в конце
+	        motion:duration="1000">			---- время анимации
+	        <OnSwipe				---- контроль движения по свайпу (есть еще OnClick)
+	            motion:touchAnchorId="@+id/button"	---- показываем какую вьюшку мы можем двигать (еще есть 	touchAnchorRegion можем указать регион где можно
 	            																					будет это делать)
  	            motion:touchAnchorSide="right"		---- с какой стороны двигаем 
 	            motion:dragDirection="dragRight" />	---- прогресс идет когда мы двигаем направо
@@ -69,14 +68,16 @@ MotionLayout - subclass ConstraintLayout'a и вследствии этого К
 	    </ConstraintSet>
 
 	</MotionScene>
-	    
 
+```
+
+```
 ((( Так же любой кастомный атрибут можно менять 	--- но в таком случае обяательно для начала и для конца прописывать кастом атрибут
 ((( <CustomAttribute
         motion:attributeName="backgroundColor"		--- название как в хмл
         motion:customColorValue="#D81B60"/>			--- значени
 ((( в констрейнт
-
+```
 
 
 3) Промежуточные Констрейнт Сеты: (KeyFrame)
@@ -88,7 +89,7 @@ https://github.com/android/views-widgets-samples/tree/master/ConstraintLayoutExa
 
 
 5) Workaround for motionlayout triger that is not direct child
-
+```
    fun handleCollapse(recyclerView: RecyclerView, motionLayout: MotionLayout) {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -103,3 +104,4 @@ https://github.com/android/views-widgets-samples/tree/master/ConstraintLayoutExa
             }
         })
     }
+    ```
